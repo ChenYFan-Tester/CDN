@@ -95,7 +95,7 @@ document.getElementById('cdnip').value = '尝试获取IP中...'
     ajax.onreadystatechange = function () {
         if( ajax.readyState == 4 ) {
             if( ajax.status == 200 ) {
-			document.getElementById('cdnip').value = ajax.responseText.split('cdn.cyfan.top')[0]
+			document.getElementById('cdnip').value = ajax.responseText.split('cdn.cyfan.top')[1].split('\n')[0].replace(' ','')
 			
             }
             else {
